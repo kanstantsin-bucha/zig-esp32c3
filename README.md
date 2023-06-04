@@ -7,7 +7,12 @@
 chmod +x && ./install-llvm.sh
 ```
 2. 
-* Connect USB port of ESP32C3 to Mac
+* Connect USB port of ESP32C3 to Mac. Tap reset button.
+* List all available ports by `ls /dev/*tty*`. Make sure you see the ESP32C2 port there.
+* Update `perform-flash.sh`with the correct port of ESP32C2.
+```
+deviceProt=/dev/tty.usbmodem2101
+```
 * Use shell script to flash
 ```
 ./perform-flash.sh
